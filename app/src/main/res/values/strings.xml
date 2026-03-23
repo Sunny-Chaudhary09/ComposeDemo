@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+
+    <!-- Splash -->
+    <string name="splash_app_name">FinPay</string>
+    <string name="splash_tagline">Banking &amp; E-Money Management</string>
+
+    <!-- Login -->
+    <string name="login_welcome">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue to your account</string>
+    <string name="login_email_hint">Email or Phone Number</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Sign In</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_sign_up">Sign Up</string>
+    <string name="login_error_empty_fields">Please enter email and password</string>
+    <string name="login_error_invalid_credentials">Invalid email or password</string>
+    <string name="login_error_api">Unable to reach login server. Try again.</string>
+    <string name="login_use_test_credentials">Use test credentials</string>
+
+    <!-- OTP -->
+    <string name="otp_title">OTP Verification</string>
+    <string name="otp_toolbar_title">OTP</string>
+    <string name="otp_back">Back</string>
+    <string name="otp_subtitle">Enter the 6-digit code sent to your phone</string>
+    <string name="otp_input_label">Enter OTP</string>
+    <string name="otp_show_code">Show code</string>
+    <string name="otp_hide_code">Hide code</string>
+    <string name="otp_verify_button">Verify OTP</string>
+    <string name="otp_resend">Resend Code</string>
+    <string name="otp_status_idle">Waiting for OTP input</string>
+    <string name="otp_status_pending">Code entered. Tap verify.</string>
+    <string name="otp_status_verified">OTP verified successfully</string>
+</resources>
