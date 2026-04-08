@@ -32,4 +32,15 @@
     <string name="otp_status_idle">Waiting for OTP input</string>
     <string name="otp_status_pending">Code entered. Tap verify.</string>
     <string name="otp_status_verified">OTP verified successfully</string>
+
+    <!-- Withdraw -->
+    <string name="withdraw_title">Withdraw</string>
+    <string name="withdraw_back">Back</string>
+    <string name="withdraw_card_hint">VISA •••• •••• •••• 1234</string>
+    <string name="withdraw_available_balance">Available balance : %1$s</string>
+    <string name="withdraw_phone_hint">+8564757899</string>
+    <string name="withdraw_amount_label">Choose amount</string>
+    <string name="withdraw_amount_hint">$ 1000</string>
+    <string name="withdraw_verify">Verify</string>
+    <string name="otp_continue_withdraw">Continue to withdraw</string>
 </resources>

@@ -57,7 +57,7 @@ fun LoginScreen(
                 horizontal = dimensionResource(R.dimen.spacing_lg),
                 vertical = dimensionResource(R.dimen.spacing_xl)
             ),
-        verticalArrangement = Arrangement.Top
+        verticalArrangement = Arrangement.Center
     )
     {
         Text(
@@ -95,7 +95,9 @@ fun LoginScreen(
                 unfocusedTextColor = colorResource(R.color.text_primary)
             )
         )
+
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_md)))
+
         OutlinedTextField(
             value = state.password,
             onValueChange = { viewModel.sendIntent(LoginIntent.PasswordChanged(it)) },
@@ -129,6 +131,7 @@ fun LoginScreen(
         }
 
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_sm)))
+
         TextButton(
             onClick = { /* Forgot password */ },
             modifier = Modifier.align(Alignment.End)
@@ -140,6 +143,7 @@ fun LoginScreen(
         }
 
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_lg)))
+
         Button(
             onClick = { viewModel.sendIntent(LoginIntent.Submit) },
             modifier = Modifier
@@ -163,6 +167,7 @@ fun LoginScreen(
         }
 
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_md)))
+
         TextButton(
             onClick = {
                 viewModel.sendIntent(LoginIntent.EmailChanged("sanjeev@yopmail.com"))
@@ -178,6 +183,7 @@ fun LoginScreen(
         }
 
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_xl)))
+
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally

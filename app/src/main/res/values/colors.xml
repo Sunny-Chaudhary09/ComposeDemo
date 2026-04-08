@@ -30,4 +30,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Withdraw (iBank / FinPay–style purple accent) -->
+    <color name="withdraw_accent">#FF7C4DFF</color>
+    <color name="withdraw_hero_surface">#FFECEFF1</color>
+    <color name="withdraw_coin">#FFFFC107</color>
+    <color name="withdraw_wallet_blue">#FF3949AB</color>
+    <color name="withdraw_phone_blue">#FF5C6BC0</color>
 </resources>

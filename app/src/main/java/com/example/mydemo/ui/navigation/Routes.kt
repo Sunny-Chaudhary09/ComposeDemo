@@ -4,4 +4,5 @@ object Routes {
     const val SPLASH = "splash"
     const val LOGIN = "login"
     const val OTP = "otp"
+    const val WITHDRAW = "withdraw"
 }

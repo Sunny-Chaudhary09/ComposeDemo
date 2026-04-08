@@ -10,6 +10,7 @@ import com.example.mydemo.ui.login.LoginScreen
 import com.example.mydemo.ui.login.LoginViewModel
 import com.example.mydemo.ui.otp.OtpScreen
 import com.example.mydemo.ui.splash.SplashScreen
+import com.example.mydemo.ui.withdraw.WithdrawScreen
 import com.example.mydemo.ui.splash.SplashViewModel
 
 @Composable
@@ -38,7 +39,13 @@ fun appNavHost(
         }
         composable(Routes.OTP) {
             OtpScreen(
-                onBackClick = { navController.popBackStack() }
+                onBackClick = { navController.popBackStack() },
+                onNavigateToWithdraw = { navController.navigate(Routes.WITHDRAW) },
+            )
+        }
+        composable(Routes.WITHDRAW) {
+            WithdrawScreen(
+                onBackClick = { navController.popBackStack() },
             )
         }
     }

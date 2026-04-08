@@ -44,7 +44,8 @@ import com.example.mydemo.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OtpScreen(
-    onBackClick: () -> Unit = {}
+    onBackClick: () -> Unit = {},
+    onNavigateToWithdraw: () -> Unit = {},
 ) {
     var otp by remember { mutableStateOf("") }
     var isVerified by remember { mutableStateOf(false) }
@@ -131,6 +132,7 @@ fun OtpScreen(
             }
 
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_md)))
+
             Button(
                 onClick = { isVerified = isOtpValid },
                 enabled = isOtpValid,
@@ -143,6 +145,7 @@ fun OtpScreen(
             }
 
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_sm)))
+
             TextButton(
                 onClick = {
                     otp = ""
@@ -154,6 +157,7 @@ fun OtpScreen(
             }
 
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_md)))
+
             val statusText = when {
                 isVerified -> stringResource(R.string.otp_status_verified)
                 otp.isNotBlank() -> stringResource(R.string.otp_status_pending)
@@ -165,6 +169,19 @@ fun OtpScreen(
                 textAlign = TextAlign.Center,
                 color = if (isVerified) colorResource(R.color.secondary) else colorResource(R.color.text_secondary)
             )
+
+            if (isVerified) {
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_lg)))
+                Button(
+                    onClick = onNavigateToWithdraw,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(52.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.primary))
+                ) {
+                    Text(text = stringResource(R.string.otp_continue_withdraw))
+                }
+            }
         }
     }
 }
