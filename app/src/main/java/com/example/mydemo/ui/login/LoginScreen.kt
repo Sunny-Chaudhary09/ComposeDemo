@@ -68,7 +68,9 @@ fun LoginScreen(
             ),
             color = colorResource(R.color.text_primary)
         )
+
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_sm)))
+
         Text(
             text = stringResource(R.string.login_subtitle),
             style = MaterialTheme.typography.bodyLarge.copy(
@@ -76,6 +78,7 @@ fun LoginScreen(
             ),
             color = colorResource(R.color.text_secondary)
         )
+
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_xxl)))
 
         OutlinedTextField(
@@ -141,9 +144,7 @@ fun LoginScreen(
                 color = colorResource(R.color.primary)
             )
         }
-
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_lg)))
-
         Button(
             onClick = { viewModel.sendIntent(LoginIntent.Submit) },
             modifier = Modifier
@@ -165,15 +166,15 @@ fun LoginScreen(
                 )
             }
         }
-
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_md)))
-
         TextButton(
             onClick = {
                 viewModel.sendIntent(LoginIntent.EmailChanged("sanjeev@yopmail.com"))
                 viewModel.sendIntent(LoginIntent.PasswordChanged("12345678"))
             },
+
             modifier = Modifier.align(Alignment.CenterHorizontally)
+
         ) {
             Text(
                 text = stringResource(R.string.login_use_test_credentials),

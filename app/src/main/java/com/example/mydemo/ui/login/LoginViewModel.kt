@@ -37,8 +37,7 @@ class LoginViewModel : BaseMviViewModel<LoginIntent, LoginState>(LoginState()) {
                         setState {
                             it.copy(
                                 isLoading = true,
-                                error = null
-                            )
+                                error = null)
                         }
                         val loginResult = performTestLoginApi(email = email, password = password)
                         currentState().copy(

@@ -6,11 +6,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.mydemo.ui.remember.RememberDemoScreen
 import com.example.mydemo.ui.login.LoginScreen
-import com.example.mydemo.ui.login.LoginViewModel
 import com.example.mydemo.ui.otp.OtpScreen
 import com.example.mydemo.ui.splash.SplashScreen
 import com.example.mydemo.ui.withdraw.WithdrawScreen
+import com.example.mydemo.ui.payment.PaymentScreen
 import com.example.mydemo.ui.splash.SplashViewModel
 
 @Composable
@@ -19,8 +20,13 @@ fun appNavHost(
 ): NavHostController {
     NavHost(
         navController = navController,
-        startDestination = Routes.SPLASH
+        startDestination = Routes.PAYMENT
     ) {
+        composable(Routes.REMEMBER_DEMO) {
+            RememberDemoScreen(
+                onNavigateToLogin = { navController.navigate(Routes.LOGIN) }
+            )
+        }
         composable(Routes.SPLASH) {
             val viewModel: SplashViewModel = viewModel()
             SplashScreen(
@@ -43,9 +49,15 @@ fun appNavHost(
                 onNavigateToWithdraw = { navController.navigate(Routes.WITHDRAW) },
             )
         }
+
         composable(Routes.WITHDRAW) {
             WithdrawScreen(
                 onBackClick = { navController.popBackStack() },
+            )
+        }
+        composable(Routes.PAYMENT) {
+            PaymentScreen(
+                onBackClick = { navController.popBackStack() }
             )
         }
     }
